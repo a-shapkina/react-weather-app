@@ -7,7 +7,7 @@ import WeatherSearch from "./WeatherSearch";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <div className="App">
-    <h1>Weather App</h1>
+    <h1>React Weather App</h1>
     <WeatherSearch />
   </div>
 );
