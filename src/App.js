@@ -9,16 +9,15 @@ export default function App() {
         <Weather />
 
         <footer>
-          <small>
-            <a
-              href="https://github.com/a-shapkina/react-weather-app"
-              target="_blank"
-              rel="noreferrer"
-            >
-              GitHub
-            </a>{" "}
-            © 2022 <a href="https://ashapkina.com">Alexandra Shapkina</a>
-          </small>
+          <a
+            href="https://github.com/a-shapkina/react-weather-app"
+            target="_blank"
+            rel="noreferrer"
+            autoFocus="on"
+          >
+            GitHub
+          </a>{" "}
+          © 2022 <a href="https://ashapkina.com">Alexandra Shapkina</a>
         </footer>
       </div>
     </div>
