@@ -1,5 +1,5 @@
+import React from "react";
 import "./App.css";
-import "bootstrap/dist/css/bootstrap.css";
 import WeatherSearch from "./WeatherSearch";
 
 export default function App() {
