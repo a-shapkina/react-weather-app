@@ -7,18 +7,6 @@ export default function App() {
     <div className="App">
       <div className="container">
         <Weather defaultCity="New York" />
-
-        <footer>
-          <a
-            href="https://github.com/a-shapkina/react-weather-app"
-            target="_blank"
-            rel="noreferrer"
-            autoFocus="on"
-          >
-            GitHub
-          </a>{" "}
-          © 2022 <a href="https://ashapkina.com">Alexandra Shapkina</a>
-        </footer>
       </div>
     </div>
   );

@@ -4,6 +4,7 @@ import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
 import WeatherForecast from "./WeatherForecast";
 import "./WeatherForecast.css";
+import WeatherFooter from "./WeatherFooter";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -41,13 +42,12 @@ export default function Weather(props) {
             <div className="col-9">
               <input
                 type="search"
-                placeHolder="Enter a city"
-                className="form-control"
-                autoFocus="on"
+                placeHolder="Enter a city.."
+                class="form-control search-input"
                 onChange={handleCityChange}
               />
             </div>
-            <div className="col-3">
+            <div className="col-3 p-0">
               <input
                 type="submit"
                 value="Search"
@@ -58,6 +58,7 @@ export default function Weather(props) {
         </form>
         <WeatherInfo data={weatherData} />
         <WeatherForecast coordinates={weatherData.coordinates} />
+        <WeatherFooter />
       </div>
     );
   } else {

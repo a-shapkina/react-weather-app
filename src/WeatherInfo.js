@@ -1,36 +1,36 @@
 import React from "react";
-import FormattedDate from "./Formatted";
+import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
+import "./WeatherInfo.css";
 
 export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo">
       {" "}
-      <h1>{props.data.city}</h1>
-      <ul>
-        <li>
-          <FormattedDate date={props.data.date} />
-        </li>
-        <li className="text-capitalize">{props.data.description}</li>
-      </ul>
-      <div className="row mt-3">
+      <div className="row">
         <div className="col-6">
-          <div className="d-flex">
-            <div>
-              <WeatherIcon code={props.data.icon} size={52} />
-            </div>
-            <div>
-              <WeatherTemperature celsius={props.data.temperature} />
-            </div>
-          </div>
-        </div>
-        <div className="col-6">
+          <h1>{props.data.city}</h1>
           <ul>
-            <li>Precipitation: 15%</li>
-            <li>Humidily: {props.data.humidity}%</li>
-            <li>Wind: {props.data.wind} km/h</li>
+            <li>
+              <span>
+                <FormattedDate date={props.data.date} />
+              </span>
+              , {props.data.description}
+            </li>
+            <li>
+              Humidily: <strong>{props.data.humidity}%</strong>, Wind:{" "}
+              <strong>{props.data.wind} km/h</strong>
+            </li>
           </ul>
+        </div>
+
+        <div className="col-lg-6 col-md-6 col-sm-8">
+          <div className="temperature-container d-flex justify-content-end">
+            <WeatherIcon code={props.data.icon} size={52} />
+
+            <WeatherTemperature celsius={props.data.temperature} />
+          </div>
         </div>
       </div>
     </div>
